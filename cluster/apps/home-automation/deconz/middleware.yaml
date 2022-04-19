@@ -4,6 +4,6 @@ kind: Middleware
 metadata:
   name: deconz-mw
 spec:
-  stripPrefixRegex:
-    regex:
-      - "/deconz"
+  redirectRegex:
+    regex: (.*)/deconz/(.*)
+    replacement: ${1}/${2}
