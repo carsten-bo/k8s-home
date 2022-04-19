@@ -12,25 +12,35 @@ metadata:
 spec:
   rules:
     - http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: homeassistant
-                port:
-                  name: hass
-          - path: /hass
-            pathType: Prefix
-            backend:
-              service:
-                name: homeassistant
-                port:
-                  name: hass
-          - path: /homeassistant
-            pathType: Prefix
-            backend:
-              service:
-                name: homeassistant
-                port:
-                  name: hass
+      host: hass.p4rkh4us.com
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: homeassistant
+              port:
+                number: hass
+    # - http:
+    #     paths:
+    #       - path: /
+    #         pathType: Prefix
+    #         backend:
+    #           service:
+    #             name: homeassistant
+    #             port:
+    #               name: hass
+    #       - path: /hass
+    #         pathType: Prefix
+    #         backend:
+    #           service:
+    #             name: homeassistant
+    #             port:
+    #               name: hass
+    #       - path: /homeassistant
+    #         pathType: Prefix
+    #         backend:
+    #           service:
+    #             name: homeassistant
+    #             port:
+    #               name: hass
