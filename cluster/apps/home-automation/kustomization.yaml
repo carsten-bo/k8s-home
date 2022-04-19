@@ -5,3 +5,4 @@ namespace: home-automation
 resources:
   - deconz
   - homeassistant
+  - certificate.yaml
