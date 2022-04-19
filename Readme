@@ -8,10 +8,10 @@ brew install fluxcd/tap/flux
 ##  Flux
 
 ```
-brew install fluxcd/tap/flux
-flux bootstrap git \
-  --url=git@github.com:carsten-bo/k8s-home.git \
-  --branch=main \
-  --path=clusters/my-cluster
-
+export GITHUB_TOKEN=<your-token>
+flux bootstrap github \
+  --owner=carsten-bo \
+  --repository=k8s-home \
+  --path=cluster \
+  --personal
 ```
