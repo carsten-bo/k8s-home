@@ -16,10 +16,11 @@ flux bootstrap github \
   --personal
 ```
 ## 1Password
+1. Create token in 1Password https://my.1password.com/integrations/directory/
+2. Create secrets
+    ```
+    kubectl create secret generic onepassword-token --from-literal=token="<TOKEN>" --namespace=secrets-manager
 
-```
-kubectl create secret generic operator.token.value --from-literal=token="<TOKEN>" --namespace=secrets-manager
+    kubectl create secret generic op-credentials --from-file=1password-credentials.json --namespace=secrets-manager
 
-kubectl create secret generic op-credentials --from-file=1password-credentials.json --namespace=secrets-manager
-
-```
+    ```
