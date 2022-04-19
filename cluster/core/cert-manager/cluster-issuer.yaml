@@ -25,7 +25,6 @@ apiVersion: cert-manager.io/v1
 kind: Issuer
 metadata:
   name: my-ca-issuer
-  namespace: sandbox
 spec:
   ca:
     secretName: root-secret
