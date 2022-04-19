@@ -13,13 +13,13 @@ spec:
   rules:
     - http:
         paths:
-          # - path: /
-          #   pathType: Prefix
-          #   backend:
-          #     service:
-          #       name: deconz
-          #       port:
-          #         name: "http"
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: deconz
+                port:
+                  name: "http"
           - path: /deconz
             pathType: Prefix
             backend:
