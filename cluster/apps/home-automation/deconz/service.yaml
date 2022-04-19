@@ -8,7 +8,8 @@ metadata:
 spec:
   ports:
     - port: 808
-      targetPort: deconz
+      targetPort: "http"
+      name: "http"
   selector:
     app: deconz
   type: ClusterIP
