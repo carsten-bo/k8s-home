@@ -11,6 +11,9 @@ metadata:
     traefik.ingress.kubernetes.io/router.middlewares: home-automation-hass-mw@kubernetescrd
 spec:
   rules:
+    - hosts:
+        - hass.p4rkh4us.com
+      secretName: root-secret
     - host: hass.p4rkh4us.com
       http:
         paths:
