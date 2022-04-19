@@ -4,3 +4,6 @@ kind: Kustomization
 resources:
   - secrets-manager.yaml
   - home-automation.yaml
+
+commonLabels:
+  kustomize.toolkit.fluxcd.io/prune: disabled
