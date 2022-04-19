@@ -1,0 +1,18 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: 1password-charts
+spec:
+  interval: 30m
+  url: https://1password.github.io/connect-helm-charts/
+  timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: jetstack-charts
+spec:
+  interval: 30m
+  url: https://charts.jetstack.io/
+  timeout: 3m
