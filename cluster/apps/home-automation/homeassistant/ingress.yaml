@@ -20,7 +20,7 @@ spec:
             service:
               name: homeassistant
               port:
-                number: hass
+                name: hass
     # - http:
     #     paths:
     #       - path: /
