@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - namespaces
   - secrets-manager
-  # - cert-manager
+  - cert-manager
