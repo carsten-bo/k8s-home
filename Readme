@@ -21,6 +21,8 @@ flux bootstrap github \
     ```
     kubectl create secret generic onepassword-token --from-literal=token="<TOKEN>" --namespace=secrets-manager
 
-    kubectl create secret generic op-credentials --from-file=1password-credentials.json --namespace=secrets-manager
+    cat 1password-credentials.json | base64 | \
+    tr '/+' '_-' | tr -d '=' | tr -d '\n' > op-session
+    kubectl create secret generic op-credentials --from-file=op-credentials --namespace=secrets-manager
 
     ```
