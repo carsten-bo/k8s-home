@@ -1,0 +1,37 @@
+---
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: hass-ingress
+  namespace: default
+  annotations:
+    traefik.frontend.rule.type: PathPrefixStrip
+    ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
+    traefik.ingress.kubernetes.io/preserve-host: "true"
+    traefik.ingress.kubernetes.io/whitelist-source-range: "192.168.0.0/24"
+    # traefik.ingress.kubernetes.io/router.middlewares: default-hass-mw@kubernetescrd
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: homeassistant
+                port:
+                  name: hass
+          - path: /hass
+            pathType: Prefix
+            backend:
+              service:
+                name: homeassistant
+                port:
+                  name: hass
+          - path: /homeassistant
+            pathType: Prefix
+            backend:
+              service:
+                name: homeassistant
+                port:
+                  name: hass

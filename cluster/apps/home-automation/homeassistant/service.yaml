@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homeassistant
+  labels:
+    app: homeassistant
+spec:
+  ports:
+    - name: hass
+      port: 8123
+      targetPort: hass
+  selector:
+    app: homeassistant
+  type: NodePort

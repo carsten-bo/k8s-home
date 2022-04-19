@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: homeassistant
+  name: homeassistant
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: homeassistant
+  template:
+    metadata:
+      labels:
+        app: homeassistant
+    spec:
+      containers:
+        - name: homeassistant
+          image: homeassistant/home-assistant:latest
+          env:
+            - name: TZ
+              value: Europe/Berlin
+          ports:
+            - containerPort: 8123
+              name: hass
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /config
+              name: hass-volume
+      restartPolicy: Always
+      volumes:
+        - name: hass-volume
+          persistentVolumeClaim:
+            claimName: hass-local-path-claim
