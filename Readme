@@ -1,0 +1,17 @@
+# Home K8s Cluster
+
+## Pre-Requisites
+```
+brew install fluxcd/tap/flux
+```
+
+##  Flux
+
+```
+brew install fluxcd/tap/flux
+flux bootstrap git \
+  --url=git@github.com:carsten-bo/k8s-home.git \
+  --branch=main \
+  --path=clusters/my-cluster
+
+```
