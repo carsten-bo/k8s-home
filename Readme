@@ -15,3 +15,11 @@ flux bootstrap github \
   --path=cluster \
   --personal
 ```
+## 1Password
+
+```
+kubectl create secret generic operator.token.value --from-literal=token="<TOKEN>" --namespace=secrets-manager
+
+kubectl create secret generic op-credentials --from-file=1password-credentials.json --namespace=secrets-manager
+
+```
