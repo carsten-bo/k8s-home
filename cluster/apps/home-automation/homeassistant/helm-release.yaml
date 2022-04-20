@@ -24,9 +24,8 @@ spec:
     env:
       TZ: "Europe/Berlin"
 
-    # hostNetwork: true
+    hostNetwork: false
     # dnsPolicy: ClusterFirstWithHostNet
-
 
     service:
       main:
