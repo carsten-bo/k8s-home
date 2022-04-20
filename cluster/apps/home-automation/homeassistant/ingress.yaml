@@ -44,10 +44,3 @@ spec:
                 name: homeassistant
                 port:
                   name: hass
-          - path: /homeassistant
-            pathType: Prefix
-            backend:
-              service:
-                name: homeassistant
-                port:
-                  name: hass
