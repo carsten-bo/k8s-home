@@ -27,14 +27,18 @@ spec:
       tag: 4.2.1
 
     env:
-      - name: TZ
-        value: "Europe/Berlin"
+      TZ: "Europe/Berlin"
+      DECONZ_VNC_PASSWORD:
+        secretKeyRef:
+          name: deconz-vnc-password
+          key: password
 
     persistence:
       config:
         enabled: true
         type: pvc
         existingClaim: appdaemon-local-path-claim
+        mountPath: /conf
 
     dnsPolicy: ClusterFirstWithHostNet
     hostNetwork: true
