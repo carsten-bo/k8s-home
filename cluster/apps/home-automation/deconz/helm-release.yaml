@@ -40,6 +40,7 @@ spec:
         secretKeyRef:
           name: deconz-secrets
           key: vnc-password
+
     service:
       main:
         ports:
