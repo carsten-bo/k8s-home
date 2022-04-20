@@ -26,10 +26,10 @@ spec:
       - name: TZ
         value: "Europe/Berlin"
 
-    persistence:
-      config:
-        enabled: true
-        type: pvc
-        existingClaim: appdaemon-local-path-claim
+    # persistence:
+    #   config:
+    #     enabled: true
+    #     type: pvc
+    #     existingClaim: appdaemon-local-path-claim
 
-    hostNetwork: true
+    # hostNetwork: true
