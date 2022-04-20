@@ -3,6 +3,9 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: deconz
+  annotations:
+    operator.1password.io/item-path: "vaults/Kubernetes/items/deconz"
+    operator.1password.io/item-name: "deconz-secrets"
 spec:
   interval: 5m
   chart:
@@ -28,10 +31,14 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      DECONZ_WEB_PORT: 80
-      DECONZ_WS_PORT: 443
+      DECONZ_WEB_PORT: 81
+      DECONZ_WS_PORT: 445
       DECONZ_DEVICE: "/dev/ttyACM0"
-      # DECONZ_VNC_MODE: 1
+      DECONZ_VNC_MODE: 1
+      DECONZ_VNC_PASSWORD:
+        secretKeyRef:
+          name: deconz-secrets
+          key: vnc-password
 
     persistence:
       config:

@@ -31,10 +31,6 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      DECONZ_VNC_PASSWORD:
-        secretKeyRef:
-          name: appdaemon-secrets
-          key: vnc-password
 
     persistence:
       config:

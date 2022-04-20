@@ -24,8 +24,16 @@ spec:
     env:
       TZ: "Europe/Berlin"
 
-    hostNetwork: true
-    dnsPolicy: ClusterFirstWithHostNet
+    # hostNetwork: true
+    # dnsPolicy: ClusterFirstWithHostNet
+
+
+    service:
+      main:
+        type: NodePort
+        ports:
+          http:
+            nodePort: 308123
 
     securityContext:
       privileged: true
