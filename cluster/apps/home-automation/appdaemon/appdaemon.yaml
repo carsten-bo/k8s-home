@@ -22,14 +22,18 @@ spec:
     remediation:
       retries: 3
   values:
+    image:
+      repository: acockburn/appdaemon
+      tag: 4.2.1
+
     env:
       - name: TZ
         value: "Europe/Berlin"
 
-    # persistence:
-    #   config:
-    #     enabled: true
-    #     type: pvc
-    #     existingClaim: appdaemon-local-path-claim
+    persistence:
+      config:
+        enabled: true
+        type: pvc
+        existingClaim: appdaemon-local-path-claim
 
-    # hostNetwork: true
+    hostNetwork: true
