@@ -28,10 +28,10 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      DECONZ_VNC_PASSWORD:
-        secretKeyRef:
-          name: deconz-vnc-password
-          key: password
+      # DECONZ_VNC_PASSWORD:
+      #   secretKeyRef:
+      #     name: deconz-vnc-password
+      #     key: password
 
     persistence:
       config:
