@@ -30,9 +30,9 @@ spec:
     service:
       main:
         type: NodePort
-        ports:
-          http:
-            nodePort: 308123
+        # ports:
+        #   http:
+        #     nodePort: 308123
 
     securityContext:
       privileged: true

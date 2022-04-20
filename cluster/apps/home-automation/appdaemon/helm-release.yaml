@@ -29,6 +29,14 @@ spec:
       repository: acockburn/appdaemon
       tag: 4.2.1
 
+    probes:
+      liveness:
+        enabled: false
+      readiness:
+        enabled: false
+      startup:
+        enabled: false
+
     env:
       TZ: "Europe/Berlin"
 
