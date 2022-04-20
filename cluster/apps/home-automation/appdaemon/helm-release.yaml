@@ -36,6 +36,12 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
+      HA_URL: "http://$(HOME_ASSISTANT_SERVICE_HOST):$(HOME_ASSISTANT_SERVICE_PORT)"
+      TOKEN:
+        secretKeyRef:
+          name: appdaemon-secrets
+          key: token
+      DASH-URL: "http://$(APPDAEMON_SERVICE_HOST):$(APPDAEMON_SERVICE_PORT)"
 
     persistence:
       config:
