@@ -3,9 +3,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: appdeamon
-  annotations:
-    operator.1password.io/item-path: "vaults/Kubernetes/items/appdaemon"
-    operator.1password.io/item-name: "appdaemon-secrets"
 spec:
   interval: 5m
   chart:
