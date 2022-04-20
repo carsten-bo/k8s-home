@@ -35,10 +35,22 @@ spec:
       DECONZ_WS_PORT: 445
       DECONZ_DEVICE: "/dev/ttyACM0"
       DECONZ_VNC_MODE: 1
+      DECONZ_VNC_PORT: 5900
       DECONZ_VNC_PASSWORD:
         secretKeyRef:
           name: deconz-secrets
           key: vnc-password
+    service:
+      main:
+        ports:
+          http:
+            port: 81
+          websocket:
+            enabled: true
+            port: 445
+          vnc:
+            enabled: true
+            port: 5900
 
     persistence:
       config:
