@@ -1,0 +1,60 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: deconz
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: deconz
+      version: 8.2.0
+      sourceRef:
+        kind: HelmRepository
+        name: k8s-at-home-charts
+        namespace: flux-system
+      interval: 5m
+  install:
+    createNamespace: true
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3
+  values:
+    image:
+      repository: deconzcommunity/deconz
+      tag: 2.15.01
+
+    env:
+      - name: TZ
+        value: "Europe/Berlin"
+      - name: DECONZ_WEB_PORT
+        value: "80"
+      - name: DECONZ_WS_PORT
+        value: "443"
+      - name: TZ
+        value: "Europe/Berlin"
+      - name: DECONZ_DEVICE
+        value: "/dev/ttyACM0"
+      - name: DECONZ_VNC_MODE
+        value: "1"
+
+    persistence:
+      config:
+        enabled: true
+        type: pvc
+        existingClaim: deconz-local-path-claim
+        mountPath: /opt/deCONZ
+      usb:
+        enabled: true
+        type: hostPath
+        hostPath: /dev/ttyACM0
+        hostPathType: CharDevice
+        mountPath: /dev/ttyACM0
+
+    dnsPolicy: ClusterFirstWithHostNet
+    hostNetwork: true
+
+    securityContext:
+      privileged: true
