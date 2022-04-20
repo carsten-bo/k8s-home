@@ -10,6 +10,7 @@ spec:
     - name: hass
       port: 8123
       targetPort: hass
+      nodeport: 30285
   selector:
     app: homeassistant
   type: NodePort
