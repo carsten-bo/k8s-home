@@ -5,4 +5,5 @@ namespace: home-automation
 resources:
   - deconz
   - homeassistant
+  - appdaemon
   - certificate.yaml
