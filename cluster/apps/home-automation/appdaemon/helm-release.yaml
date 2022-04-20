@@ -3,6 +3,9 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: appdeamon
+  annotations:
+    operator.1password.io/item-path: "vaults/Kubernetes/items/appdaemon"
+    operator.1password.io/item-name: "appdaemon-secrets"
 spec:
   interval: 5m
   chart:
@@ -28,10 +31,10 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      # DECONZ_VNC_PASSWORD:
-      #   secretKeyRef:
-      #     name: deconz-vnc-password
-      #     key: password
+      DECONZ_VNC_PASSWORD:
+        secretKeyRef:
+          name: appdaemon-secrets
+          key: vnc-password
 
     persistence:
       config:
