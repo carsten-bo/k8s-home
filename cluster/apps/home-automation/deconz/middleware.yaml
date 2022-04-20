@@ -1,9 +1,0 @@
----
-apiVersion: traefik.containo.us/v1alpha1
-kind: Middleware
-metadata:
-  name: deconz-mw
-spec:
-  redirectRegex:
-    regex: (.*)/deconz/(.*)
-    replacement: ${1}/${2}

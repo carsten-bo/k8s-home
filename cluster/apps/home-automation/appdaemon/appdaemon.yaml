@@ -36,4 +36,5 @@ spec:
         type: pvc
         existingClaim: appdaemon-local-path-claim
 
+    dnsPolicy: ClusterFirstWithHostNet
     hostNetwork: true
