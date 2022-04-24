@@ -4,38 +4,12 @@ apiVersion: networking.k8s.io/v1
 metadata:
   name: hass-ingress
   annotations:
-    # traefik.frontend.rule.type: PathPrefixStrip
-    # ingress.kubernetes.io/whitelist-x-forwarded-for: "true"
-    # traefik.ingress.kubernetes.io/preserve-host: "true"
-    # traefik.ingress.kubernetes.io/whitelist-source-range: "192.168.0.0/24"
-    # traefik.ingress.kubernetes.io/router.middlewares: home-automation-hass-mw@kubernetescrd
+    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
-  # tls:
-  #   - hosts:
-  #       - hass.p4rkh4us.com
-  #     secretName: root-secret
   rules:
-    # - host: hass.p4rkh4us.com
-    #   http:
-    #     paths:
-    #       - path: /
-    #         pathType: Prefix
-    #         backend:
-    #           service:
-    #             name: home-assistant
-    #             port:
-    #               name: hass
-    # - host: hass.raspberrypi.local
-    #   http:
-    #     paths:
-    #       - path: /
-    #         pathType: Prefix
-    #         backend:
-    #           service:
-    #             name: home-assistant
-    #             port:
-    #               name: hass
-    - http:
+    - host: hass.p4rkh4us.com
+      http:
         paths:
           - path: /
             pathType: Prefix
@@ -44,3 +18,7 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
+  tls:
+    - secretName: hass-p4rkh4us-com-tls
+      hosts:
+        - hass.p4rkh4us.com
