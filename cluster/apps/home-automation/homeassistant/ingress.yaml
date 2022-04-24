@@ -37,10 +37,10 @@ spec:
     #               name: hass
     - http:
         paths:
-          - path: /hass
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: home-assistant
                 port:
-                  name: hass
+                  number: 8123
