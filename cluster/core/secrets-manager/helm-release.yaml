@@ -33,3 +33,4 @@ spec:
         - "flux-system"
         - "secrets-manager"
         - "home-automation"
+        - "cert-manager"
