@@ -11,10 +11,10 @@ spec:
     # The ACME server URL
     server: https://acme-staging-v02.api.letsencrypt.org/directory
     # Email address used for ACME registration
-    email: carsten031290@gmail.com
-      # secretKeyRef:
-      #   name: cert-manager-secrets
-      #   key: e-mail
+    email:
+      secretKeyRef:
+        name: cert-manager-secrets
+        key: e-mail
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-staging
