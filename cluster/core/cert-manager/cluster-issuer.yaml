@@ -3,9 +3,6 @@ apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-staging
-# annotations:
-#   operator.1password.io/item-path: "vaults/Kubernetes/items/cert-manager"
-#   operator.1password.io/item-name: "cert-manager-secrets"
 spec:
   acme:
     # The ACME server URL
@@ -13,8 +10,8 @@ spec:
     # Email address used for ACME registration
     email:
       secretKeyRef:
-        name: cert-manager-secrets
-        key: e-mail
+        name: "cert-manager-secrets"
+        key: "e-mail"
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-staging
