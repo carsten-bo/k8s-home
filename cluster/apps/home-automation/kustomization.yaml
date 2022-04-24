@@ -6,4 +6,3 @@ resources:
   - deconz
   - homeassistant
   - appdaemon
-  - certificate.yaml
