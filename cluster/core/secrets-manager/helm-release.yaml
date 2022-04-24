@@ -3,9 +3,6 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: 1password
-  annotations:
-    operator.1password.io/item-path: "vaults/Kubernetes/items/appdeamon"
-    operator.1password.io/item-name: "credential"
 spec:
   interval: 5m
   chart:
