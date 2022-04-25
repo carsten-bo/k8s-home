@@ -32,7 +32,7 @@ spec:
         type: NodePort
         ports:
           http:
-            nodePort: "328123"
+            nodePort: "38123"
 
     securityContext:
       privileged: true
