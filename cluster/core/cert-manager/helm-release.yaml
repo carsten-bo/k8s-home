@@ -4,6 +4,10 @@ kind: HelmRelease
 metadata:
   name: cert-manager
   namespace: cert-manager
+
+deploymentAnnotations:
+  certmanager.k8s.io/disable-validation: "true"
+
 spec:
   interval: 5m
   chart:
