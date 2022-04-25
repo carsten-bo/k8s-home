@@ -14,9 +14,12 @@ spec:
       name: letsencrypt-prod
     # Enable the HTTP-01 challenge provider
     solvers:
-      - http01:
-          ingress:
-            class: traefik
+      - dns01:
+          cloudflare:
+            email: "${SECRET_CLOUDFLARE_EMAIL}"
+            apiTokenSecretRef:
+              name: cert-manager-secrets
+              key: cloudflare-api-key
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -33,6 +36,9 @@ spec:
       name: letsencrypt-staging
     # Enable the HTTP-01 challenge provider
     solvers:
-      - http01:
-          ingress:
-            class: traefik
+      - dns01:
+          cloudflare:
+            email: "${SECRET_CLOUDFLARE_EMAIL}"
+            apiTokenSecretRef:
+              name: cert-manager-secrets
+              key: cloudflare-api-key

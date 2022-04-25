@@ -8,7 +8,7 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
   rules:
-    - host: hass.p4rkh4us.com
+    - host: hass.${SECRET_DOMAIN}
       http:
         paths:
           - path: /
@@ -19,6 +19,6 @@ spec:
                 port:
                   number: 8123
   tls:
-    - secretName: hass-p4rkh4us-com-tls
+    - secretName: hass.${SECRET_DOMAIN}.cert
       hosts:
-        - hass.p4rkh4us.com
+        - hass.${SECRET_DOMAIN}
