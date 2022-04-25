@@ -8,17 +8,17 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
 spec:
   rules:
-    - host: hass.${SECRET_DOMAIN}
+    - host: appd.${SECRET_DOMAIN}
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: home-assistant
+                name: appdeamon-appdaemon
                 port:
-                  number: 8123
+                  number: 5050
   # tls:
   #   - secretName: "${SECRET_CERTIFICATE_DEFAULT}"
   #     hosts:
-  #       - hass.${SECRET_DOMAIN}
+  #       - .${SECRET_DOMAIN}
