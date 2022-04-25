@@ -1,3 +1,26 @@
+# Developer dependencies
+.bin
+
+# IDE resources
+.vscode
+.idea
+.devcontainer/
+
+# Helm resources
+charts/*/Chart.lock
+charts/*/charts
+helper-charts/*/Chart.lock
+helper-charts/*/charts
+
+# Other rsources
+.env
+.envrc
+Gemfile.lock
+
+# Trash
+.DS_Store
+Thumbs.db
+
 # Local .terraform directories
 **/.terraform/*
 **/*.lock.hcl
@@ -9,3 +32,11 @@
 # Crash log files
 crash.log
 crash.*.log
+
+# k8s
+kubeconfig
+
+# vscode-sops
+.decrypted~*.yaml
+.config.env
+*.agekey
