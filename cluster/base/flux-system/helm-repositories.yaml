@@ -34,3 +34,12 @@ spec:
   interval: 30m
   url: https://grafana.github.io/helm-charts
   timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: emberstack-charts
+spec:
+  interval: 30m
+  url: https://emberstack.github.io/helm-charts
+  timeout: 3m
