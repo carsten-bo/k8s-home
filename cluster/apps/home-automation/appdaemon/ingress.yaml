@@ -2,7 +2,7 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: hass-ingress
+  name: appdaemon-ingress
   annotations:
     kubernetes.io/ingress.class: "traefik"
     traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
@@ -21,4 +21,4 @@ spec:
   # tls:
   #   - secretName: "${SECRET_CERTIFICATE_DEFAULT}"
   #     hosts:
-  #       - .${SECRET_DOMAIN}
+  #       - appd.${SECRET_DOMAIN}

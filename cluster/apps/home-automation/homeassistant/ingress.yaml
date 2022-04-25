@@ -18,7 +18,7 @@ spec:
                 name: home-assistant
                 port:
                   number: 8123
-  # tls:
-  #   - secretName: "${SECRET_CERTIFICATE_DEFAULT}"
-  #     hosts:
-  #       - hass.${SECRET_DOMAIN}
+  tls:
+    - secretName: "${SECRET_CERTIFICATE_DEFAULT}"
+      hosts:
+        - hass.${SECRET_DOMAIN}
