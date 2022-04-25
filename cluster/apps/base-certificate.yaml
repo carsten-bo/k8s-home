@@ -2,10 +2,10 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: ${SECRET_DOMAIN}.cert
+  name: ${SECRET_DEFAULT_CERTIFICATE_NAME}
   namespace: default
 spec:
-  secretName: ${SECRET_DOMAIN}.cert
+  secretName: ${SECRET_DEFAULT_CERTIFICATE_NAME}
   issuerRef:
     name: letsencrypt-production
     kind: ClusterIssuer
