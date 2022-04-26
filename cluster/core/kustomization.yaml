@@ -6,4 +6,4 @@ resources:
   - secrets-manager
   - secret-reflector
   - cert-manager
-  - storage-system
+  # - storage-system
