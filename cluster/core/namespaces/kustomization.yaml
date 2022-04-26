@@ -5,7 +5,7 @@ resources:
   - secrets-manager.yaml
   - home-automation.yaml
   - cert-manager.yaml
-  - longhorn-system.yaml
+  - storage-system.yaml
 
 commonLabels:
   kustomize.toolkit.fluxcd.io/prune: disabled
