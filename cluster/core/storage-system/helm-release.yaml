@@ -21,3 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
+  values:
+    image:
+      repository: rook/ceph
+      tag: v1.9.1-18.g9c74e9bb3
