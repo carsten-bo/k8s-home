@@ -31,3 +31,4 @@ spec:
         - "secrets-manager"
         - "home-automation"
         - "cert-manager"
+        - "github-runner"
