@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: github-runner
+  name: hass-config-github-runner
   labels:
-    app: github-runner
+    app: hass-config-github-runner
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: github-runner
+      app: hass-config-github-runner
   template:
     metadata:
       labels:
-        app: github-runner
+        app: hass-config-github-runner
     spec:
       containers:
         - name: github-runner
