@@ -6,4 +6,5 @@ resources:
   - secrets-manager
   - secret-reflector
   - cert-manager
+  - github-runner
   # - storage-system

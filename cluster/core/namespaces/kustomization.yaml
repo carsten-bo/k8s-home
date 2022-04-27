@@ -6,6 +6,7 @@ resources:
   - home-automation.yaml
   - cert-manager.yaml
   - storage-system.yaml
+  - github-runner.yaml
 
 commonLabels:
   kustomize.toolkit.fluxcd.io/prune: disabled

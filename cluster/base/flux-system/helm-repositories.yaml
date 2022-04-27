@@ -68,5 +68,5 @@ metadata:
   name: kubernetes-dashboard-charts
 spec:
   interval: 30m
-  url: https://kubernetes.github.io/dashboard/
+  url: https://kubernetes.github.io/dashboard
   timeout: 3m
