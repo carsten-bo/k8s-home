@@ -65,7 +65,7 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: k8s-dashboard-charts
+  name: kubernetes-dashboard-charts
 spec:
   interval: 30m
   url: https://kubernetes.github.io/dashboard/
