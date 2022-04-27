@@ -18,6 +18,7 @@ spec:
       containers:
         - name: github-runner
           image: wbond/pi-github-runner-base:latest
+          command: ["sudo apt-get update && sudo apt-get install -y libatomic1"]
           env:
             - name: GITHUB_USER
               value: carsten-bo
