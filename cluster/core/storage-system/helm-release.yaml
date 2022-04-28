@@ -2,16 +2,16 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: rook-ceph
+  name: longhorn
 spec:
   interval: 5m
   chart:
     spec:
-      chart: rook-ceph
-      version: 1.9.1
+      chart: longhorn
+      version: 1.2.4
       sourceRef:
         kind: HelmRepository
-        name: rook-charts
+        name: longhorn-charts
         namespace: flux-system
       interval: 5m
   install:
@@ -21,7 +21,3 @@ spec:
   upgrade:
     remediation:
       retries: 3
-  values:
-    image:
-      repository: rook/ceph
-      tag: v1.9.1-18.g9c74e9bb3
