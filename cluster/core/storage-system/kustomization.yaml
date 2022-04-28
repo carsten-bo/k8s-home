@@ -4,4 +4,3 @@ kind: Kustomization
 namespace: storage-system
 resources:
   - helm-release.yaml
-  - ingress.yaml
