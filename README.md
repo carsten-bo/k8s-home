@@ -24,3 +24,9 @@ flux bootstrap github \
     kubectl create secret generic op-credentials --from-file=1password-credentials.json -credentials --namespace=secrets-manager
 
     ```
+
+## Longhorn
+Longhorn needs open-iscsi installed
+```
+sudo apt-get update;sudo apt-get install -y open-iscsi
+```
