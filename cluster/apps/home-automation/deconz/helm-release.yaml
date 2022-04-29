@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: deconzcommunity/deconz
-      tag: 2.15.01
+      tag: 2.15.02
 
     env:
       TZ: "Europe/Berlin"
@@ -59,7 +59,7 @@ spec:
       usb:
         enabled: true
         type: hostPath
-        hostPath: /dev/ttyACM0
+        hostPath: /dev/serial/by-id/usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2429387-if00
         hostPathType: CharDevice
         mountPath: /dev/ttyACM0
 
