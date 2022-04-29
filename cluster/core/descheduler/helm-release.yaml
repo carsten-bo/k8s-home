@@ -22,6 +22,8 @@ spec:
     remediation:
       retries: 3
   values:
+    kind: Deployment
+
     image:
       repository: k8s.gcr.io/descheduler/descheduler
       tag: v0.23.1
