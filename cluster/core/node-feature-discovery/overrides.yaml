@@ -10,5 +10,6 @@ data:
       - name: "conbee"
         matchOn:
         - usbId:
-            device: ["usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2429387-if00"]
-            # vendor: ["27b8"]
+            device: ["010"]
+            vendor: ["1cf1"]
+            class: ["02"]
