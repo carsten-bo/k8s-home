@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name: nfd-worker-conf
 data:
-  nfd-worker.conf:
+  nfd-worker.conf: |
     sources:
       custom:
         - name: "conbee"
