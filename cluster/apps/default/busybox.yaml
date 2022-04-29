@@ -1,0 +1,27 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: default
+spec:
+  restartPolicy: Always
+  containers:
+    - image: busybox
+      command: ["/bin/sh", "-c", "--"]
+      args: ["while sleep 1000; do :; done"]
+      imagePullPolicy: IfNotPresent
+      name: busybox
+  #     volumeMounts:
+  #       - mountPath: "/migration/exchange-volume"
+  #         name: local-volume
+  #       - mountPath: "/migration/lonhorn-volume"
+  #         name: longhorn-volume
+
+  # volumes:
+  #   - name: local-volume
+  #     persistentVolumeClaim:
+  #       claimName: deconz-local-path-claim
+  #   - name: longhorn-volume
+  #     persistentVolumeClaim:
+  #       claimName: deconz-longhorn-pvc
