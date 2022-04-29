@@ -9,17 +9,17 @@ spec:
     spec:
       # renovate: registryUrl=https://k8s-at-home.com/charts/
       chart: node-feature-discovery
-      version: 13.0.2
+      version: 2.1.2
       sourceRef:
         kind: HelmRepository
         name: nfd-charts
         namespace: kube-system
       interval: 5m
-  # values:
-  #   worker:
-  #     config:
-  #       core:
-  #         labelSources:
-  #           - all
-  #         featureSources:
-  #           - all
+  values:
+    worker:
+      config:
+        core:
+          labelSources:
+            - all
+          featureSources:
+            - all
