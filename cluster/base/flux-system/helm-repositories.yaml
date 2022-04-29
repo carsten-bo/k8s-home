@@ -70,3 +70,21 @@ spec:
   interval: 30m
   url: https://kubernetes.github.io/dashboard
   timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: adaptant-charts
+spec:
+  interval: 30m
+  url: https://adaptant-labs.github.io/charts/adaptant
+  timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: kubernetes-dashboard-charts
+spec:
+  interval: 30m
+  url: https://adaptant-labs.github.io/charts/adaptant
+  timeout: 3m

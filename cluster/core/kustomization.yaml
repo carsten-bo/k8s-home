@@ -8,3 +8,4 @@ resources:
   - cert-manager
   - github-runner
   - storage-system
+  - node-label-monitor
