@@ -74,8 +74,8 @@ spec:
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: adaptant-charts
+  name: nfd-charts
 spec:
   interval: 30m
-  url: https://adaptant-labs.github.io/charts/adaptant
+  url: https://kubernetes-sigs.github.io/node-feature-discovery/charts
   timeout: 3m

@@ -46,3 +46,17 @@ Longhorn needs open-iscsi installed
 ```
 sudo apt-get update;sudo apt-get install -y open-iscsi
 ```
+
+## K3s
+
+Add "cgroup_memory=1 cgroup_enable=memory" /boot/cmdline.txt
+
+For adding a new node, see https://pet2cattle.com/2021/04/k3s-join-nodes
+
+```
+# Enabling legacy iptables on Raspbian Buster
+sudo iptables -F
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+sudo reboot
+```
