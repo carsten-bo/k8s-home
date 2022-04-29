@@ -8,8 +8,10 @@ data:
     sources:
       custom:
         - name: "conbee"
-          matchOn:
-            - usbId:
-                # device: ["010"]
-                vendor: ["1cf1"]
-                # class: ["02"]
+          labels:
+            conbee: "true"
+          matchFeatures:
+            - usb.device:
+                vendor: ""1cf1""
+                device: "02"
+#               # class: ["02"]
