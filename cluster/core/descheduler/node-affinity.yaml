@@ -1,8 +1,10 @@
 ---
 apiVersion: "descheduler/v1alpha1"
 kind: "DeschedulerPolicy"
+metadata:
+  name: node-affinity-policy
 strategies:
-  "RemovePodsViolatingNodeAffinity":
+  RemovePodsViolatingNodeAffinity:
     enabled: true
     params:
       nodeAffinityType:

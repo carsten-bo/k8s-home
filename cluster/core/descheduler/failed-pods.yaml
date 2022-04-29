@@ -1,8 +1,10 @@
 ---
 apiVersion: "descheduler/v1alpha1"
 kind: "DeschedulerPolicy"
+metadata:
+  name: failed-pods-policy
 strategies:
-  "RemoveFailedPods":
+  RemoveFailedPods:
     enabled: true
     params:
       failedPods:

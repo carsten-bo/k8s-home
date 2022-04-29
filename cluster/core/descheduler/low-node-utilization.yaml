@@ -1,6 +1,8 @@
 ---
 apiVersion: "descheduler/v1alpha1"
 kind: "DeschedulerPolicy"
+metadata:
+  name: low-node-utilization-policy
 strategies:
   "LowNodeUtilization":
     enabled: true
