@@ -10,6 +10,6 @@ data:
         - name: "conbee"
           matchOn:
             - usbId:
-                device: ["010"]
+                # device: ["010"]
                 vendor: ["1cf1"]
-                class: ["02"]
+                # class: ["02"]
