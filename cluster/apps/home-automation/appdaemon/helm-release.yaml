@@ -45,15 +45,10 @@ spec:
 
     persistence:
       config:
-        - enabled: true
-          type: pvc
-          existingClaim: appdaemon-local-path-claim
-          mountPath: /conf
-        - enabled: true
-          type: hostPath
-          hostPath: /home/pi/appd-data/
-          hostPathType: CharDevice
-          mountPath: /appd-data
+        enabled: true
+        type: pvc
+        existingClaim: appdaemon-local-path-claim
+        mountPath: /conf
 
     dnsPolicy: ClusterFirstWithHostNet
     hostNetwork: true
