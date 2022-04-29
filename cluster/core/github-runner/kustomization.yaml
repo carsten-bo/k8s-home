@@ -5,4 +5,3 @@ namespace: github-runner
 resources:
   - deployment.yaml
   - secrets.yaml
-  - https://github.com/kubernetes-sigs/node-feature-discovery/deployment/overlays/default?ref=v0.11.0
