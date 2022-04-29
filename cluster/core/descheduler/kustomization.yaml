@@ -4,7 +4,3 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - helm-release.yaml
-  - high-node-utilization.yaml
-  - low-node-utilization.yaml
-  - node-affinity.yaml
-  - failed-pods.yaml
