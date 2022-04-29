@@ -30,14 +30,6 @@ spec:
       config:
         sources:
           custom:
-            - name: "conbee2"
-              labels:
-                "conbee2": "true"
-              matchOn:
-                - usbId:
-                    # device: ["010"]
-                    vendor: ["1cf1"]
-                    class: ["02"]
             - name: "conbee"
               labels:
                 "conbee": "true"
@@ -45,5 +37,5 @@ spec:
                 - feature: usb.device
                   matchExpressions:
                     vendor: { op: In, value: ["1cf1"] }
+                    class: { op: In, value: ["02"] }
                     # device: { op: In, value: ["10"] }
-                    # class: { op: In, value: ["02"] }
