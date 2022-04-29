@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nfd-worker-conf
+data:
+  nfd-worker.conf: |
+    sources:
+      custom:
+      - name: "conbee"
+        matchOn:
+        - usbId:
+            device: ["usb-dresden_elektronik_ingenieurtechnik_GmbH_ConBee_II_DE2429387-if00"]
+            # vendor: ["27b8"]
