@@ -9,3 +9,4 @@ resources:
   - github-runner
   - storage-system
   - node-feature-discovery
+  - descheduler
