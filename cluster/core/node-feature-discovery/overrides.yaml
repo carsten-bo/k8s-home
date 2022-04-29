@@ -14,4 +14,3 @@ data:
             - usb.device:
                 vendor: ""1cf1""
                 device: "02"
-#               # class: ["02"]
