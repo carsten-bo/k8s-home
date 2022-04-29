@@ -46,7 +46,7 @@ spec:
       config:
         enabled: true
         type: pvc
-        existingClaim: hass-local-path-claim
+        existingClaim: hass-longhorn-pvc
         mountPath: /config
 
     resources:

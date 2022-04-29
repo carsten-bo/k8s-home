@@ -54,7 +54,7 @@ spec:
       config:
         enabled: true
         type: pvc
-        existingClaim: deconz-local-path-claim
+        existingClaim: deconz-longhorn-pvc
         mountPath: /opt/deCONZ
       usb:
         enabled: true
