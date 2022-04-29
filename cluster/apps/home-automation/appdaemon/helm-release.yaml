@@ -47,7 +47,7 @@ spec:
       config:
         enabled: true
         type: pvc
-        existingClaim: appdaemon-local-path-claim
+        existingClaim: appdaemon-longhorn-pvc
         mountPath: /conf
 
     dnsPolicy: ClusterFirstWithHostNet
