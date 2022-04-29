@@ -26,28 +26,28 @@ spec:
       repository: k8s.gcr.io/descheduler/descheduler
       tag: v0.23.1
 
-      deschedulerPolicy:
-        strategies:
-          RemoveDuplicates:
-            enabled: true
-          RemovePodsViolatingNodeTaints:
-            enabled: true
-          RemovePodsViolatingNodeAffinity:
-            enabled: true
-            params:
-              nodeAffinityType:
-                - requiredDuringSchedulingIgnoredDuringExecution
-          RemovePodsViolatingInterPodAntiAffinity:
-            enabled: true
-          LowNodeUtilization:
-            enabled: true
-            params:
-              nodeResourceUtilizationThresholds:
-                thresholds:
-                  cpu: 20
-                  memory: 20
-                  pods: 20
-                targetThresholds:
-                  cpu: 50
-                  memory: 50
-                  pods: 50
+    deschedulerPolicy:
+      strategies:
+        RemoveDuplicates:
+          enabled: true
+        RemovePodsViolatingNodeTaints:
+          enabled: true
+        RemovePodsViolatingNodeAffinity:
+          enabled: true
+          params:
+            nodeAffinityType:
+              - requiredDuringSchedulingIgnoredDuringExecution
+        RemovePodsViolatingInterPodAntiAffinity:
+          enabled: true
+        LowNodeUtilization:
+          enabled: true
+          params:
+            nodeResourceUtilizationThresholds:
+              thresholds:
+                cpu: 20
+                memory: 20
+                pods: 20
+              targetThresholds:
+                cpu: 50
+                memory: 50
+                pods: 50
