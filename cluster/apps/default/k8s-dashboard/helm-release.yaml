@@ -25,4 +25,5 @@ spec:
     service:
       type: NodePort
       # Dashboard service port
-      externalPort: 30200
+      externalPort: 443
+      nodePort: 30200
