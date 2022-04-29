@@ -4,5 +4,4 @@ kind: Kustomization
 namespace: kube-system
 bases:
   - https://github.com/kubernetes-sigs/node-feature-discovery/deployment/overlays/default?ref=v0.11.0
-patchesStrategicMerge:
-  - overrides.yaml
+  - node-feature-rules.yaml
