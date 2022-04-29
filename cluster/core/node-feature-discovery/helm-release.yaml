@@ -15,3 +15,9 @@ spec:
         name: nfd-charts
         namespace: kube-system
       interval: 5m
+  values:
+    worker:
+      config:
+        core:
+          labelSources:
+            - "all"
