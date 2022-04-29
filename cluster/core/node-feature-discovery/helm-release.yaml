@@ -20,4 +20,6 @@ spec:
       config:
         core:
           labelSources:
-            - "all"
+            - all
+          featureSources:
+            - all
