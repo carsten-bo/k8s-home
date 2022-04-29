@@ -24,9 +24,6 @@ spec:
     env:
       TZ: "Europe/Berlin"
 
-    hostNetwork: false
-    # dnsPolicy: ClusterFirstWithHostNet
-
     service:
       main:
         type: NodePort
@@ -35,7 +32,7 @@ spec:
             nodePort: "30123"
 
     securityContext:
-      privileged: true
+      privileged: false
 
     probes:
       liveness:
