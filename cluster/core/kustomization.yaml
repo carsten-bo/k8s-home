@@ -8,4 +8,4 @@ resources:
   - cert-manager
   - github-runner
   - storage-system
-  # - node-feature-discovery
+  - node-feature-discovery
