@@ -78,3 +78,12 @@ spec:
                   operator: In
                   values:
                     - "true"
+    probes:
+      liveness:
+        enabled: true
+        custom: true
+        spec:
+          exec:
+            command:
+              - ls
+              - /dev/ttyACM0
