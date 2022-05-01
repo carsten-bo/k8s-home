@@ -32,3 +32,4 @@ spec:
         - "home-automation"
         - "cert-manager"
         - "github-runner"
+        - "persistence"

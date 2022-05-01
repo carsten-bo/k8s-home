@@ -71,9 +71,3 @@ spec:
         volumeMounts:
           - name: config
             mountPath: /config
-        service:
-          main:
-            type: NodePort
-            ports:
-              http:
-                nodePort: "30124"

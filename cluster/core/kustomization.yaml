@@ -10,4 +10,5 @@ resources:
   - storage-system
   - node-feature-discovery
   - descheduler
+  - persistence
   # - metallb-system
