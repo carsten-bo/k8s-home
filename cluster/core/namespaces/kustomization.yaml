@@ -9,6 +9,7 @@ resources:
   - github-runner.yaml
   - metallb-system.yaml
   - persistence.yaml
+  - networking.yaml
 
 commonLabels:
   kustomize.toolkit.fluxcd.io/prune: disabled
