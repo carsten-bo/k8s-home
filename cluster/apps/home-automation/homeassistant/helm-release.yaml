@@ -24,12 +24,12 @@ spec:
     env:
       TZ: "Europe/Berlin"
 
-    # service:
-    #   main:
-    #     type: LoadBalancer
-    #     externalIPs:
-    #       - ${CLUSTER_LB_HASS}
-    #     externalTrafficPolicy: Local
+    service:
+      main:
+        type: LoadBalancer
+        externalIPs:
+          - ${CLUSTER_LB_HASS}
+        externalTrafficPolicy: Local
 
     securityContext:
       privileged: false
