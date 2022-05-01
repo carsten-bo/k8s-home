@@ -28,3 +28,13 @@ spec:
           protocol: layer2
           addresses:
             - "${METALLB_LB_RANGE}"
+
+    controller:
+      image:
+        repository: quay.io/metallb/controller
+        tag: v0.12
+
+    speaker:
+      image:
+        repository: quay.io/metallb/speaker
+        tag: v0.12
