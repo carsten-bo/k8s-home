@@ -10,3 +10,4 @@ resources:
   - storage-system
   - node-feature-discovery
   - descheduler
+  - metallb-system
