@@ -26,10 +26,10 @@ spec:
 
     service:
       main:
-        type: NodePort
-        ports:
-          http:
-            nodePort: "30123"
+        type: LoadBalancer
+        externalIPs:
+          - ${CLUSTER_LB_HASS}
+        externalTrafficPolicy: Local
 
     securityContext:
       privileged: false
