@@ -11,7 +11,7 @@ spec:
       version: 0.12.1
       sourceRef:
         kind: HelmRepository
-        name: metallb-charts
+        name: bitnami-charts
         namespace: flux-system
   install:
     createNamespace: true
