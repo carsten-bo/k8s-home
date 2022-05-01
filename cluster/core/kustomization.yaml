@@ -8,7 +8,7 @@ resources:
   - cert-manager
   - github-runner
   - storage-system
-  - node-feature-discovery
   - descheduler
   - metallb-system
+  - kube-system
   # - persistence
