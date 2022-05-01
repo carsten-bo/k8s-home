@@ -9,6 +9,16 @@ metadata:
     traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
+    - host: hass.${SECRET_DOMAIN_LOCAL}
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: home-assistant
+                port:
+                  number: 8123
     - host: hass.${SECRET_DOMAIN}
       http:
         paths:
