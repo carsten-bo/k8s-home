@@ -31,7 +31,7 @@ spec:
                   key: personal-access-token
           volumeMounts:
             - mountPath: /hass-volume
-              name: volume
+              name: hass-volume
 
           resources:
             requests:
