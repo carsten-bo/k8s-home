@@ -6,3 +6,4 @@ resources:
  - pvc.yaml
  - ingress.yaml
  - codeserver-svc.yaml
+ - config-github-runner
