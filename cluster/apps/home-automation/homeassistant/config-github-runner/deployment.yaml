@@ -29,6 +29,10 @@ spec:
                 secretKeyRef:
                   name: github-runner-secrets
                   key: personal-access-token
+          volumeMounts:
+            - mountPath: /hass-volume
+              name: volume
+
           resources:
             requests:
               memory: "64Mi"
@@ -36,3 +40,8 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+
+      volumes:
+        - name: hass-volume
+          persistentVolumeClaim:
+            claimName: hass-longhorn-pvc
