@@ -9,5 +9,5 @@ spec:
     - protocol: TCP
       port: 12321
       targetPort: codeserver
-  clusterIP: ${CLUSTER_LB_HASS_CS}
+  clusterIP: "${CLUSTER_LB_HASS_CS}"
   type: LoadBalancer
