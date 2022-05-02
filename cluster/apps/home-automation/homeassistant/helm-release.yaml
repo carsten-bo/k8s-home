@@ -61,12 +61,7 @@ spec:
           repository: ghcr.io/k8s-at-home/code-server
           tag: v4.3.0
         service:
-          enabled: true
-          main:
-            type: LoadBalancer
-            externalIPs:
-              - ${CLUSTER_LB_HASS_CS}
-            externalTrafficPolicy: Local
+          enabled: false
         workingDir: "/config"
         args:
           - --auth
