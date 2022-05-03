@@ -30,7 +30,7 @@ spec:
                   name: github-runner-secrets
                   key: personal-access-token
           volumeMounts:
-            - mountPath: /hass-volume
+            - mountPath: /home/ubuntu/hass-volume
               name: hass-volume
 
           resources:
