@@ -44,4 +44,4 @@ spec:
       volumes:
         - name: hass-volume
           persistentVolumeClaim:
-            claimName: hass-longhorn-pvc
+            claimName: hass-rwm-longhorn-pvc
