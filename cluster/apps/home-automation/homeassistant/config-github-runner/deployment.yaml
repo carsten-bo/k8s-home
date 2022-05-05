@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hass-config-github-runner
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hass-config-github-runner
@@ -30,7 +30,7 @@ spec:
                   name: github-runner-secrets
                   key: personal-access-token
           volumeMounts:
-            - mountPath: /home/ubuntu/hass-volume
+            - mountPath: /hass-volume
               name: hass-volume
 
           resources:
