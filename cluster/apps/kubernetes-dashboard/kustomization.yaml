@@ -4,3 +4,4 @@ kind: Kustomization
 namespace: kubernetes-dashboard
 resources:
   - helm-release.yaml
+  - svc.yaml
