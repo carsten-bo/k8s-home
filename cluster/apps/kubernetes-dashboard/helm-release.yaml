@@ -21,3 +21,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
+  values:
+    service:
+      type: NodePort
+      nodePort: 30100
