@@ -6,7 +6,7 @@ metadata:
   labels:
     app: hass-config-github-runner
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: hass-config-github-runner
@@ -32,6 +32,8 @@ spec:
           volumeMounts:
             - mountPath: /hass-volume
               name: hass-volume
+            - mountPath: /hass-volume-old
+              name: hass-volume-old
 
           resources:
             requests:
@@ -45,3 +47,6 @@ spec:
         - name: hass-volume
           persistentVolumeClaim:
             claimName: hass-rwm-longhorn-pvc
+        - name: hass-volume-old
+          persistentVolumeClaim:
+            claimName: hass-longhorn-pvc
