@@ -5,5 +5,4 @@ resources:
   # - default
   - kubernetes-dashboard
   - home-automation
-  - networking
   - base-certificate.yaml

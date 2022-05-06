@@ -60,3 +60,10 @@ sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
 sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
 sudo reboot
 ```
+
+## Metallb
+
+For arp to announce the ip address to the router, promisc mode needs to be set on rpi
+```
+sudo ifconfig wlan0 promisc && sudo ifconfig eth0 promisc
+```
