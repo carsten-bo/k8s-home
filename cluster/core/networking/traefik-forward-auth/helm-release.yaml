@@ -30,7 +30,7 @@ spec:
     env:
       LOG_LEVEL: trace
       LOG_FORMAT: pretty
-      LOGOUT_REDIRECT: "https://www.google.co.uk"
+      LOGOUT_REDIRECT: "https://www.google.de"
       WHITELIST: ${SECRET_TRAEFIK_AUTH_WHITELIST}
       LIFETIME: "28000"
       URL_PATH: "/_oauth"

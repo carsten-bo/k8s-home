@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: appdaemon-auth-ingress
+  name: appdaemon-ingress
 spec:
   entryPoints:
     - websecure
@@ -12,6 +12,8 @@ spec:
       services:
         - name: appdeamon-appdaemon
           port: 5050
+          namespace: home-automation
+          scheme: http
       middlewares:
         - name: traefik-forward-auth
           namespace: networking
