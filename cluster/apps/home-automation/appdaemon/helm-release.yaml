@@ -34,6 +34,13 @@ spec:
       startup:
         enabled: false
 
+    service:
+      main:
+        type: LoadBalancer
+        externalIPs:
+          - ${CLUSTER_LB_APPDAEMON}
+        externalTrafficPolicy: Local
+
     env:
       TZ: "Europe/Berlin"
       HA_URL: "http://$(HOME_ASSISTANT_SERVICE_HOST):$(HOME_ASSISTANT_SERVICE_PORT)"
@@ -50,5 +57,5 @@ spec:
         existingClaim: appdaemon-longhorn-pvc
         mountPath: /conf
 
-    dnsPolicy: ClusterFirstWithHostNet
-    hostNetwork: true
+    # dnsPolicy: ClusterFirstWithHostNet
+    # hostNetwork: true
