@@ -118,3 +118,13 @@ spec:
   interval: 30m
   url: https://ori-edge.github.io/k8s_gateway/
   timeout: 3m
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: traefik-charts
+  namespace: flux-system
+spec:
+  interval: 30m
+  url: https://helm.traefik.io/traefik
+  timeout: 3m
