@@ -4,5 +4,4 @@ kind: Kustomization
 namespace: kube-system
 resources:
   - kube-vip
-  - traefik
   - node-feature-discovery
