@@ -63,7 +63,9 @@ sudo reboot
 
 ## Metallb
 
-For arp to announce the ip address to the router, promisc mode needs to be set on rpi
+For arp to announce the ip address via wifi to the router, promisc mode needs to be set on rpi. Fort his, edit `/etc/rc.local` and add following lines
+
 ```
-sudo ifconfig wlan0 promisc && sudo ifconfig eth0 promisc
+ifconfig wlan0 promisc 
+ifconfig eth0 promisc
 ```
