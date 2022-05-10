@@ -20,9 +20,5 @@ spec:
         - name: home-assistant-codeserver
           port: 12321
           namespace: home-automation
-          scheme: http
-      middlewares:
-        - name: traefik-forward-auth
-          namespace: networking
   tls:
     secretName: "${SECRET_CERTIFICATE_DEFAULT}"
