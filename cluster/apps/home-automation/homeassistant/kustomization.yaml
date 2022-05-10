@@ -4,6 +4,6 @@ kind: Kustomization
 resources:
  - helm-release.yaml
  - pvc.yaml
- - ingress.yaml
+ - ingress-route.yaml
  - codeserver-svc.yaml
  - config-github-runner
