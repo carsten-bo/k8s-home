@@ -16,7 +16,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: hello-world
+                name: landing-page
                 port:
                   number: 80
 

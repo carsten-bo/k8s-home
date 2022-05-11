@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-deployment
+  name: landing-page-deployment
   labels:
-    app: hello-world
+    app: landing-page
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-world
+      app: landing-page
   template:
     metadata:
       labels:
-        app: hello-world
+        app: landing-page
     spec:
       containers:
-        - name: hello-world
-          image: tutum/hello-world
+        - name: landing-page
+          image: nginxdemos/hello
           ports:
             - containerPort: 80
