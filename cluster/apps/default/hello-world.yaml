@@ -27,9 +27,12 @@ metadata:
   name: default-ingress
   annotations:
     kubernetes.io/ingress.class: "traefik"
+    traefik.ingress.kubernetes.io/router.entrypoints: "websecure"
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   rules:
-    - http:
+    - host: ${SECRET_DOMAIN}
+      http:
         paths:
           - path: /
             pathType: Prefix
@@ -38,3 +41,8 @@ spec:
                 name: hello-world
                 port:
                   number: 80
+
+  tls:
+    - secretName: "${SECRET_CERTIFICATE_DEFAULT}"
+      hosts:
+        - ${SECRET_DOMAIN}
