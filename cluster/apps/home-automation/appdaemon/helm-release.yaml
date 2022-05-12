@@ -2,7 +2,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: appdeamon
+  name: appdaemon
 spec:
   interval: 5m
   chart:
@@ -57,5 +57,22 @@ spec:
         existingClaim: appdaemon-longhorn-pvc
         mountPath: /conf
 
-    # dnsPolicy: ClusterFirstWithHostNet
-    # hostNetwork: true
+    addons:
+      codeserver:
+        enabled: true
+        image:
+          repository: ghcr.io/k8s-at-home/code-server
+          tag: v4.4.0
+        service:
+          enabled: true
+        workingDir: "/conf"
+        args:
+          - --auth
+          - "none"
+          - --user-data-dir
+          - "/conf/.vscode"
+          - --extensions-dir
+          - "/conf/.vscode"
+        volumeMounts:
+          - name: config
+            mountPath: /conf
