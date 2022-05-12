@@ -43,7 +43,7 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      HA_URL: "http://$(HOME_ASSISTANT_SERVICE_HOST):$(HOME_ASSISTANT_SERVICE_PORT)"
+      HA_URL: http://home-assistant.home-automation.svc.cluster.local:$(HOME_ASSISTANT_SERVICE_PORT)
       TOKEN:
         secretKeyRef:
           name: appdaemon-secrets
