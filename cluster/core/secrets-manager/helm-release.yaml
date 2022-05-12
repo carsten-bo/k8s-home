@@ -33,3 +33,4 @@ spec:
         - "cert-manager"
         - "github-runner"
         - "persistence"
+        - "monitoring"
