@@ -23,3 +23,36 @@ spec:
   upgrade:
     remediation:
       retries: 5
+  values:
+    grafana:
+      adminPassword: ${SECRET_GRAFANA_PASSWORD}
+      dashboards:
+        default:
+          kubernetes-custom:
+            url: https://raw.githubusercontent.com/auricom/home-cluster/main/cluster/apps/monitoring/kube-prometheus-stack/grafana-dashboards/homelab-temparatures.json
+            datasource: Prometheus
+          flux-cluster:
+            url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/cluster.json
+            datasource: Prometheus
+          flux-control-plane:
+            url: https://raw.githubusercontent.com/fluxcd/flux2/main/manifests/monitoring/grafana/dashboards/control-plane.json
+            datasource: Prometheus
+          home-assistant:
+            url: https://raw.githubusercontent.com/auricom/home-cluster/main/cluster/apps/monitoring/kube-prometheus-stack/grafana-dashboards/home-assistant.json
+            datasource: Prometheus
+      deploymentStrategy:
+        type: Recreate
+      persistence:
+        enabled: false
+      env:
+        GF_EXPLORE_ENABLED: true
+        GF_DISABLE_SANITIZE_HTML: true
+        GF_PANELS_DISABLE_SANITIZE_HTML: true
+      plugins:
+        - natel-discrete-panel
+        - pr0ps-trackmap-panel
+        - grafana-piechart-panel
+        - vonage-status-panel
+        - grafana-worldmap-panel
+        - grafana-clock-panel
+        - camptocamp-prometheus-alertmanager-datasource
