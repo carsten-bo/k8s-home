@@ -10,7 +10,7 @@ spec:
     - match: Host(`appd.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: appdaemon-appdaemon
+        - name: appdaemon
           port: 5050
           scheme: http
       middlewares:
@@ -19,7 +19,7 @@ spec:
     - match: Host(`appd-config.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: appdaemon-appdaemon-codeserver
+        - name: appdaemon-codeserver
           port: 12321
       middlewares:
         - name: traefik-forward-auth
