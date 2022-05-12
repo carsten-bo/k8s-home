@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: fritz-box-ingress
+  name: landing-page-ingress
 spec:
   entryPoints:
     - websecure
