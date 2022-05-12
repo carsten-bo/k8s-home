@@ -6,3 +6,4 @@ resources:
   - deconz
   - homeassistant
   - appdaemon
+  - secrets.yaml
