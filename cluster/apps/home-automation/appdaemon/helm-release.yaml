@@ -43,13 +43,12 @@ spec:
 
     env:
       TZ: "Europe/Berlin"
-      HA_URL: http://home-assistant.home-automation.svc.cluster.local:$(HOME_ASSISTANT_SERVICE_PORT)
+      HA_URL: http://home-assistant:$(HOME_ASSISTANT_SERVICE_PORT)
       TOKEN:
         secretKeyRef:
           name: appdaemon-secrets
           key: token
-      DASH-URL: "http://$(APPDAEMON_SERVICE_HOST):$(APPDAEMON_SERVICE_PORT)"
-
+      DASH-URL: http://appdaemon:$(APPDAEMON_SERVICE_PORT)
     persistence:
       config:
         enabled: true
