@@ -10,7 +10,7 @@ spec:
     - match: Host(`fritz.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: home-assistant-codeserver
+        - name: fritz-box
           port: 80
       middlewares:
         - name: traefik-forward-auth
