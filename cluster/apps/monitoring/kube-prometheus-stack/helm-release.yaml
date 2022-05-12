@@ -25,11 +25,7 @@ spec:
       retries: 5
   values:
     grafana:
-      admin:
-        ## Name of the secret. Can be templated.
-        existingSecret: prometheus-secrets
-        userKey: grafana-user
-        passwordKey: grafana-password
+      adminPassword: ${SECRET_GRAFANA_PASSWORD}
       dashboards:
         default:
           kubernetes-custom:
