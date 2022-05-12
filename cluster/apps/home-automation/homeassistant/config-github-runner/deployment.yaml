@@ -17,14 +17,14 @@ spec:
     spec:
       containers:
         - name: github-runner
-          image: wbond/pi-github-runner-base:latest
+          image: myoung34/github-runner:latest
           # command: ["/bin/bash -c sudo apt-get update && sudo apt-get install -y libatomic1"]
           env:
-            - name: GITHUB_USER
-              value: carsten-bo
-            - name: GITHUB_REPO
-              value: homeassistant-config
-            - name: GITHUB_ACCESS_TOKEN
+            - name: RUNNER_NAME
+              value: hass-config-runner
+            - name: REPO_URL
+              value: https://github.com/carsten-bo/homeassistant-config
+            - name: ACCESS_TOKEN
               valueFrom:
                 secretKeyRef:
                   name: github-runner-secrets
