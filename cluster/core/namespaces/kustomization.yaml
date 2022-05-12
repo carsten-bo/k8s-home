@@ -11,6 +11,7 @@ resources:
   - persistence.yaml
   - networking.yaml
   - kubernetes-dashboard.yaml
+  - monitoring.yaml
 
 commonLabels:
   kustomize.toolkit.fluxcd.io/prune: disabled
