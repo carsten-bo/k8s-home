@@ -7,11 +7,11 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`monitor.${SECRET_DOMAIN}`) && Host(`prometheus.${SECRET_DOMAIN}`)
+    - match: Host(`grafana.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: appdaemon
-          port: 5050
+        - name: kube-prometheus-stack-grafana
+          port: 80
           scheme: http
       middlewares:
         - name: traefik-forward-auth
