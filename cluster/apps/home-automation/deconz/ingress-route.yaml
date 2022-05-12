@@ -2,16 +2,16 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: appdaemon-ingress
+  name: deconz-ingress
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`appd.${SECRET_DOMAIN}`)
+    - match: Host(`deconz.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: appdeamon-appdaemon
-          port: 5050
+        - name: deconz
+          port: 81
           scheme: http
       middlewares:
         - name: traefik-forward-auth
