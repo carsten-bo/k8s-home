@@ -1,0 +1,19 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: fritz-box-ingress
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`fritz.${SECRET_DOMAIN}`)
+      kind: Rule
+      services:
+        - name: home-assistant-codeserver
+          port: 80
+      middlewares:
+        - name: traefik-forward-auth
+          namespace: networking
+  tls:
+    secretName: "${SECRET_CERTIFICATE_DEFAULT}"
