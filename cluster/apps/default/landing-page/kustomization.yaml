@@ -4,4 +4,4 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - svc.yaml
-  - ingress.yaml
+  - ingress-route.yaml
