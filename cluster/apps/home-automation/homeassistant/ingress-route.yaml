@@ -14,6 +14,9 @@ spec:
           port: 8123
           namespace: home-automation
           scheme: http
+      middlewares:
+        - name: traefik-forward-auth
+          namespace: networking
     - match: Host(`hass-config.${SECRET_DOMAIN}`)
       kind: Rule
       services:
