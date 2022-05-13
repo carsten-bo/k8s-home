@@ -65,6 +65,8 @@ spec:
         service:
           enabled: true
         workingDir: "/conf"
+        env:
+          GIT_SSH_COMMAND: 'ssh -i /conf/.ssh/id_rsa -o IdentitiesOnly=yes'
         args:
           - --auth
           - "none"
