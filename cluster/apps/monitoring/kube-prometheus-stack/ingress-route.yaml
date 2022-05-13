@@ -25,5 +25,14 @@ spec:
       middlewares:
         - name: traefik-forward-auth
           namespace: networking
+    - match: Host(`alerts.${SECRET_DOMAIN}`)
+      kind: Rule
+      services:
+        - name: kube-prometheus-stack-alertmanager
+          port: 9093
+          scheme: http
+      middlewares:
+        - name: traefik-forward-auth
+          namespace: networking
   tls:
     secretName: "${SECRET_CERTIFICATE_DEFAULT}"
