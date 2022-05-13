@@ -67,6 +67,8 @@ spec:
         workingDir: "/conf"
         env:
           GIT_SSH_COMMAND: 'ssh -i /conf/.ssh/id_rsa -o IdentitiesOnly=yes'
+          GIT_AUTHOR_NAME: ${SECRET_GIT_NAME}
+          GIT_AUTHOR_EMAIL: ${SECRET_GIT_MAIL}
         args:
           - --auth
           - "none"
