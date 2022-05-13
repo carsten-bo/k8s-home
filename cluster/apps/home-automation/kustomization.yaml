@@ -6,4 +6,5 @@ resources:
   - deconz
   - homeassistant
   - appdaemon
+  - mosquitto
   - secrets.yaml
