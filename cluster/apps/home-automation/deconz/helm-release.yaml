@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: deconzcommunity/deconz
-      tag: 2.16.00
+      tag: 2.16.01
 
     env:
       TZ: "Europe/Berlin"
