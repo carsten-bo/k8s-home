@@ -31,7 +31,7 @@ spec:
       passwordKey: password
 
     persistentVolumeClaim:
-      enabled: true
+      existingClaim: pihole-rwm-longhorn-pvc
 
     serviceDns:
       loadBalancerIP: ${CLUSTER_LB_PIHOLE}
