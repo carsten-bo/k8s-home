@@ -5,7 +5,6 @@ metadata:
   name: pihole
 spec:
   interval: 5m
-  replicaCount: 2
   chart:
     spec:
       chart: pihole
@@ -24,6 +23,8 @@ spec:
       retries: 3
 
   values:
+
+    replicaCount: 2
 
     admin:
       existingSecret: pihole-secrets
