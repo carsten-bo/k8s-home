@@ -5,6 +5,7 @@ metadata:
   name: pihole
 spec:
   interval: 5m
+  replicaCount: 2
   chart:
     spec:
       chart: pihole
@@ -21,6 +22,7 @@ spec:
   upgrade:
     remediation:
       retries: 3
+
   values:
 
     admin:
