@@ -7,4 +7,5 @@ resources:
   - homeassistant
   - appdaemon
   - mosquitto
+  - pihole
   - secrets.yaml
