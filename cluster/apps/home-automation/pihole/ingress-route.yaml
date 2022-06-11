@@ -2,16 +2,16 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: deconz-ingress
+  name: pihole-ingress
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`deconz.${SECRET_DOMAIN}`)
+    - match: Host(`pihole.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: deconz
-          port: 81
+        - name: pihole-web
+          port: 80
           scheme: http
       middlewares:
         - name: traefik-forward-auth
