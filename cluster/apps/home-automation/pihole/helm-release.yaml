@@ -22,6 +22,11 @@ spec:
     remediation:
       retries: 3
   values:
+
+    admin:
+      existingSecret: pihole-secrets
+      passwordKey: password
+
     persistentVolumeClaim:
       enabled: true
 
