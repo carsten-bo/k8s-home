@@ -42,7 +42,7 @@ spec:
       main:
         type: LoadBalancer
         externalIPs:
-          - ${CLUSTER_LB_APPDAEMON}
+          - ${CLUSTER_LB_DECONZ}
         externalTrafficPolicy: Local
         ports:
           http:
