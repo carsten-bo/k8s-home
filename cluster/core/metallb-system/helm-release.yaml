@@ -9,7 +9,7 @@ spec:
     spec:
       chart: metallb
       # version: 3.0.1 # for bitnami
-      version: 0.13.2
+      version: 0.12.1
       sourceRef:
         kind: HelmRepository
         name: metallb-charts
@@ -32,9 +32,9 @@ spec:
     controller:
       image:
         repository: quay.io/metallb/controller
-        tag: v0.13
+        tag: v0.12
 
     speaker:
       image:
         repository: quay.io/metallb/speaker
-        tag: v0.13
+        tag: v0.12
