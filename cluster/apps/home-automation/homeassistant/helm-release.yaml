@@ -56,7 +56,7 @@ spec:
       readiness:
         enabled: true
       startup:
-        enabled: true
+        enabled: false
 
     persistence:
       config:
