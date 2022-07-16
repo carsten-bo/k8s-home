@@ -18,7 +18,7 @@ spec:
       containers:
         - name: github-runner
           image: myoung34/github-runner:2.294.0
-          # command: ["/bin/bash -c sudo apt-get update && sudo apt-get install -y libatomic1"]
+          command: ["/bin/bash -c mkdir -p /root/.ssh"]
           env:
             - name: RUNNER_NAME
               value: hass-config-runner
