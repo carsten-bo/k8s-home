@@ -32,6 +32,8 @@ spec:
           volumeMounts:
             - mountPath: /appd-volume
               name: appd-volume
+            - mountPath: /appd-volume-old
+              name: appd-volume-old
 
           resources:
             requests:
@@ -43,5 +45,8 @@ spec:
 
       volumes:
         - name: appd-volume
+          persistentVolumeClaim:
+            claimName: appd-rwm-longhorn-pvc
+        - name: appd-volume-old
           persistentVolumeClaim:
             claimName: appdaemon-longhorn-pvc
