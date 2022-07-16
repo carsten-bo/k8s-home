@@ -35,7 +35,7 @@ spec:
           lifecycle:
             postStart:
               exec:
-                command: ["/bin/bash", "-c", "mkdir", "-p", "$HOME/.ssh"]
+                command: ["/bin/bash", "-c", "mkdir -p $HOME/.ssh"]
 
           resources:
             requests:
