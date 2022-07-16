@@ -6,7 +6,6 @@ resources:
   - home-automation.yaml
   - cert-manager.yaml
   - storage-system.yaml
-  - github-runner.yaml
   - metallb-system.yaml
   - persistence.yaml
   - networking.yaml
