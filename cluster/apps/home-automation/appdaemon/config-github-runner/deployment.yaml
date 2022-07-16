@@ -49,6 +49,3 @@ spec:
         - name: appd-volume
           persistentVolumeClaim:
             claimName: appd-rwm-longhorn-pvc
-        - name: appd-volume-old
-          persistentVolumeClaim:
-            claimName: appdaemon-longhorn-pvc
