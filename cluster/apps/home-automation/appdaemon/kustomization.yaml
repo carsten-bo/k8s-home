@@ -6,4 +6,4 @@ resources:
   - pvc.yaml
   - secrets.yaml
   - ingress-route.yaml
-  - config-github-runner
+  # - config-github-runner

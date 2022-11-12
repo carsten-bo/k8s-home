@@ -7,4 +7,4 @@ resources:
  - ingress-route.yaml
  - podmonitor.yaml
  - secrets.yaml
- - config-github-runner
+#  - config-github-runner
