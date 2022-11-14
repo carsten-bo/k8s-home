@@ -5,7 +5,11 @@ metadata:
   name: traefik-forward-auth-ingress
   labels:
     app: traefik-forward-auth-ingress
+
 spec:
+  selector:
+    matchLabels:
+      app: traefik-forward-auth-ingress
   template:
     metadata:
       labels:
