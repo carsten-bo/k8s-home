@@ -5,4 +5,4 @@ namespace: networking
 resources:
   - k8s-gateway
   - traefik
-  # - traefik-forward-auth
+  - traefik-forward-auth
