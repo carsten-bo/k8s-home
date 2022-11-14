@@ -4,3 +4,4 @@ kind: Kustomization
 namespace: metallb-system
 resources:
   - helm-release.yaml
+  - resources.yaml
