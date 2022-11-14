@@ -11,10 +11,7 @@ spec:
     - match: Host(`auth.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: traefik-forward-auth
+        - name: traefik-forward-auth-ingress
           port: 4181
-      # middlewares:
-      #   - name: traefik-forward-auth
-      #     namespace: networking
   tls:
     secretName: "${SECRET_CERTIFICATE_DEFAULT}"

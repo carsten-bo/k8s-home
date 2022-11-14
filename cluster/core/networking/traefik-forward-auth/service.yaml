@@ -1,0 +1,12 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: traefik-forward-auth-ingress
+spec:
+  selector:
+    app: traefik-forward-auth-ingress
+  ports:
+    - protocol: TCP
+      port: 4181
+      targetPort: 4181

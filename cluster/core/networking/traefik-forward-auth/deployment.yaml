@@ -1,0 +1,40 @@
+---
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: traefik-forward-auth-ingress
+  labels:
+    app: traefik-forward-auth-ingress
+spec:
+  template:
+    metadata:
+      labels:
+        name: traefik-forward-auth-ingress
+        app: traefik-forward-auth-ingress
+    spec:
+      containers:
+        - name: traefik-forward-auth-ingress
+          image: thomseddon/traefik-forward-auth:2
+          imagePullPolicy: Always
+          env:
+            LOG_LEVEL: trace
+            LOG_FORMAT: pretty
+            LOGOUT_REDIRECT: "https://www.google.de"
+            WHITELIST: ${SECRET_TRAEFIK_AUTH_WHITELIST}
+            LIFETIME: "28000"
+            # SECRET: "?"
+            # INSECURE_COOKIE: false
+            URL_PATH: "/_oauth"
+            AUTH_HOST: "auth.${SECRET_DOMAIN}"
+            COOKIE_DOMAIN: "${SECRET_DOMAIN}"
+            PROVIDERS_GOOGLE_CLIENT_ID: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_ID}"
+            PROVIDERS_GOOGLE_CLIENT_SECRET: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_SECRET}"
+          ports:
+            - containerPort: 4181
+          resources:
+            requests:
+              cpu: "25m"
+              memory: "25Mi"
+            limits:
+              cpu: "300m"
+              memory: "150Mi"

@@ -1,0 +1,11 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: Middleware
+metadata:
+  name: traefik-forward-auth-ingress
+spec:
+  forwardAuth:
+    address: http://traefik-forward-auth-ingress:4181
+    authResponseHeaders:
+      - "X-Forwarded-User"
+    trustForwardHeader: true
