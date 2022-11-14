@@ -17,18 +17,30 @@ spec:
           image: thomseddon/traefik-forward-auth:2
           imagePullPolicy: Always
           env:
-            LOG_LEVEL: trace
-            LOG_FORMAT: pretty
-            LOGOUT_REDIRECT: "https://www.google.de"
-            WHITELIST: ${SECRET_TRAEFIK_AUTH_WHITELIST}
-            LIFETIME: "28000"
-            # SECRET: "?"
-            # INSECURE_COOKIE: false
-            URL_PATH: "/_oauth"
-            AUTH_HOST: "auth.${SECRET_DOMAIN}"
-            COOKIE_DOMAIN: "${SECRET_DOMAIN}"
-            PROVIDERS_GOOGLE_CLIENT_ID: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_ID}"
-            PROVIDERS_GOOGLE_CLIENT_SECRET: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_SECRET}"
+            - name: LOG_LEVEL
+              value: trace
+            - name: LOG_FORMAT
+              value: pretty
+            - name: LOGOUT_REDIRECT
+              value: "https://www.google.de"
+            - name: WHITELIST
+              value: ${SECRET_TRAEFIK_AUTH_WHITELIST}
+            - name: LIFETIME
+              value: "28000"
+            - name: URL_PATH
+              value: "/_oauth"
+            - name: AUTH_HOST
+              value: "auth.${SECRET_DOMAIN}"
+            - name: COOKIE_DOMAIN
+              value: "${SECRET_DOMAIN}"
+            - name: PROVIDERS_GOOGLE_CLIENT_ID
+              value: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_ID}"
+            - name: PROVIDERS_GOOGLE_CLIENT_SECRET
+              value: "${SECRET_TRAEFIK_AUTH_GOOGLE_CLIENT_SECRET}"
+            # - name: SECRET
+            #   value: "?"
+            # - name: INSECURE_COOKIE
+            #   value: false
           ports:
             - containerPort: 4181
           resources:
