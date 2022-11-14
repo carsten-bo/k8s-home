@@ -18,9 +18,9 @@ spec:
     spec:
       containers:
         - name: traefik-forward-auth-ingress
-          image: thomseddon/traefik-forward-auth:2
-          # image: ghcr.io/kitos9112/traefik-forward-auth
-          # tag: v2.6.6
+          # image: thomseddon/traefik-forward-auth:2
+          image: ghcr.io/kitos9112/traefik-forward-auth
+          tag: v2.6.6
           pullPolicy: IfNotPresent
           env:
             - name: LOG_LEVEL
