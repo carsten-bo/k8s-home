@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: traefik-forward-auth-ingress
+  name: traefik-forward-auth
   namespace: networking
 spec:
   entryPoints:
@@ -11,7 +11,7 @@ spec:
     - match: Host(`auth.${SECRET_DOMAIN}`)
       kind: Rule
       services:
-        - name: traefik-forward-auth-ingress
+        - name: traefik-forward-auth
           port: 4181
   tls:
     secretName: "${SECRET_CERTIFICATE_DEFAULT}"

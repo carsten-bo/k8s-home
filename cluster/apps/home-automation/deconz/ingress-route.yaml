@@ -14,7 +14,7 @@ spec:
           port: 80
           scheme: http
       middlewares:
-        - name: traefik-forward-auth-ingress
+        - name: traefik-forward-auth
           namespace: networking
   tls:
     secretName: "${SECRET_CERTIFICATE_DEFAULT}"
