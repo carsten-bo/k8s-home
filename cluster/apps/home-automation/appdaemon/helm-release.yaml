@@ -24,7 +24,7 @@ spec:
   values:
     image:
       repository: acockburn/appdaemon
-      tag: 4.2.1
+      tag: 4.4.2
 
     probes:
       liveness:
