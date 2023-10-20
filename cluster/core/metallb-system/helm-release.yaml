@@ -9,7 +9,7 @@ spec:
     spec:
       chart: metallb
       # version: 3.0.1 # for bitnami
-      version: 0.13.7
+      version: 0.13.12
       sourceRef:
         kind: HelmRepository
         name: metallb-charts
