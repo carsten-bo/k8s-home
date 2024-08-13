@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: github-runner
-          image: myoung34/github-runner:2.299.1
+          image: myoung34/github-runner:2.319.1
           env:
             - name: RUNNER_NAME
               value: appd-config-runner
